@@ -1,10 +1,10 @@
-# kube101
+# Deploy a Sample web application in Kubernetes
 
-These instructions show how to deploy a very simple web application that uses a data backend using redis. You don't need to install **any** software, just point your browser at the kubernetes playground and follow along with the steps.
+ To deploy a very simple web application that uses a data backend  You don't need to install **any** software, just point your browser at the kubernetes playground and follow along with the steps.
 
 ## Initial set up
 
-1.  In a browser, open the [kubernetes playground](http://labs.play-with-k8s.com/) and log in using either a Docker Hub id or a GitHub id. Then click on **Start**.
+1.  In a browser, open the [kubernetes playground]and log in using either a Docker Hub id or a GitHub id. Then click on **Start**.
 
 2.  Click on **ADD NEW INSTANCE** to set up your first node. Make a note of the IP address shown when it starts. Replace `10.0.10.4` in the command examples using curl with your node1 IP address.
 
@@ -123,7 +123,7 @@ These instructions show how to deploy a very simple web application that uses a 
 
     and there is a similar response in the browser tab
 
-8.  Add redis as a pod. First create the yaml for the pod, then use kubectl to create the pod.
+8.  First create the yaml for the pod, then use kubectl to create the pod.
 
     ```
     cat > dbpod.yaml
@@ -142,7 +142,7 @@ These instructions show how to deploy a very simple web application that uses a 
     web       1/1       Running   0          31m       10.44.0.1   node2
     ```
 
-10. Test out the redis pod
+10. Test out the pod
 
     ```
     kubectl exec -it redis bash
@@ -155,7 +155,6 @@ These instructions show how to deploy a very simple web application that uses a 
     "test-only"
     ```
 
-    Exit out of the redis-cli and back out of the pod to return to the node prompt.
 
 
 11. Add a service for redis
@@ -416,7 +415,7 @@ These instructions show how to deploy a very simple web application that uses a 
     deployment "web" deleted
     ```
 
-## Summary and next steps
+
 You have seen how to create an application on Kubernetes using pods and services and how to manage a collection of pods, like a web front-end using a deployment.
 
-Interested in learning more? Check out the [Container Orchestration](https://developer.ibm.com/code/patterns/) Code Patterns from the IBM Code website.
+
