@@ -103,7 +103,6 @@
 
     > note the highlighted port on the browser page that appears - that's exposing access to the NodePort to the browser session.
 
-    ![NodePort button](images/nodeport.png)
 
 6.  Check on the status of the Service
 
